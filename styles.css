@@ -1,0 +1,92 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+button {
+  position: relative;
+  float: right;
+}
+
+#app {
+  height: 100%;
+}
+
+.appContainer {
+  height: 100%;
+}
+
+.header {
+  position: relative;
+  width: 50%;
+  height: 20%;
+  margin: 0 auto;
+  background-image: url('http://i.imgur.com/aoHYjPs.png');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.boggleContainer {
+  position: relative;
+  height: 350px;
+  width: 350px;
+  margin: 0 auto;
+  border: 5px solid #FFCA08;
+  background-color: #398BD4; 
+}
+
+.boggleDie {
+  display: inline-flex;
+  position: relative;
+  width: 16%;
+  height: 16%;
+  background-color: white;
+  margin: 5.7px;
+  margin-left: 8px;
+  margin-top: 7px;
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);
+}
+
+.clickedBoggleDie {
+  display: inline-flex;
+  position: relative;
+  width: 16%;
+  height: 16%;
+  background-color: #ACCEEC;
+  margin: 5.7px;
+  margin-left: 8px;
+  margin-top: 7px;
+  border-radius: 7px;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 2px 4px rgba(0, 0, 0, .5);  
+}
+
+.currentWord {
+  position: relative;
+  width: 50%;
+  margin: 10px auto;
+}
+
+.scoreTable {
+  position: relative;
+  width: 50%;
+  margin: 0 auto;
+  background-color: #FFCA08;
+}
+
+.scoreTable tr {
+  text-align: left;
+  margin: 20px;
+  background-color: white;
+}
+
+.scoreTable tfoot tr {
+  background-color: #ACCEEC;
+}
