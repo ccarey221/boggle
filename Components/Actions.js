@@ -32,7 +32,6 @@ actions.updateClickedLetters = (previousState, data) => {
   } else {
     clickedLetters.pop();
   }
-  console.log(clickedLetters, "CLICKED")
   gameplay.clickedLetters = clickedLetters;
   const newState = Object.assign({}, previousState, { gameplay });
   return newState;

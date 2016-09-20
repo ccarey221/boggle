@@ -6,7 +6,6 @@ class BoggleDice extends React.Component {
     super(props);
     this.state = {
       clicked: false,
-      lastClicked: -1,
     }
     this.onClick = this.onClick.bind(this);
     this.adjacencyCheck = this.adjacencyCheck.bind(this);
@@ -20,7 +19,6 @@ class BoggleDice extends React.Component {
 
   lowerMatrixCheck(currentDice, lastDice) {
     var lowerNum = currentDice - lastDice;
-    console.log(lowerNum, currentDice, lastDice, 'LOWERNUM');
     if (lowerNum === 6 || lowerNum === 5 || lowerNum === 4) {
       return true;
     }
@@ -61,7 +59,6 @@ class BoggleDice extends React.Component {
       this.props.updateClickedLetters({ clicked: this.state.clicked });
       this.setState({
         clicked: this.props.clickedLetters.includes(this.props.publicKey),
-        lastClicked: numOfClickedLetters >= 2 ? this.props.clickedLetters[numOfClickedLetters-2] : -1,
       })
       return;
     }
@@ -77,7 +74,6 @@ class BoggleDice extends React.Component {
         });
         this.setState({
           clicked: this.props.clickedLetters.includes(this.props.publicKey),
-          lastClicked: this.props.publicKey,
         })
       }
     }

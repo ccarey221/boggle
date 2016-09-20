@@ -23242,7 +23242,7 @@
 /* 197 */
 /***/ function(module, exports) {
 
-	"use strict";
+	'use strict';
 
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
@@ -23281,7 +23281,6 @@
 	  } else {
 	    clickedLetters.pop();
 	  }
-	  console.log(clickedLetters, "CLICKED");
 	  gameplay.clickedLetters = clickedLetters;
 	  var newState = Object.assign({}, previousState, { gameplay: gameplay });
 	  return newState;
@@ -23497,8 +23496,7 @@
 	    var _this = _possibleConstructorReturn(this, (BoggleDice.__proto__ || Object.getPrototypeOf(BoggleDice)).call(this, props));
 
 	    _this.state = {
-	      clicked: false,
-	      lastClicked: -1
+	      clicked: false
 	    };
 	    _this.onClick = _this.onClick.bind(_this);
 	    _this.adjacencyCheck = _this.adjacencyCheck.bind(_this);
@@ -23516,7 +23514,6 @@
 	    key: 'lowerMatrixCheck',
 	    value: function lowerMatrixCheck(currentDice, lastDice) {
 	      var lowerNum = currentDice - lastDice;
-	      console.log(lowerNum, currentDice, lastDice, 'LOWERNUM');
 	      if (lowerNum === 6 || lowerNum === 5 || lowerNum === 4) {
 	        return true;
 	      }
@@ -23558,8 +23555,7 @@
 	        this.props.updateCurrentWord({ clicked: this.state.clicked });
 	        this.props.updateClickedLetters({ clicked: this.state.clicked });
 	        this.setState({
-	          clicked: this.props.clickedLetters.includes(this.props.publicKey),
-	          lastClicked: numOfClickedLetters >= 2 ? this.props.clickedLetters[numOfClickedLetters - 2] : -1
+	          clicked: this.props.clickedLetters.includes(this.props.publicKey)
 	        });
 	        return;
 	      }
@@ -23574,8 +23570,7 @@
 	            clicked: this.props.clickedLetters.includes(this.props.publicKey)
 	          });
 	          this.setState({
-	            clicked: this.props.clickedLetters.includes(this.props.publicKey),
-	            lastClicked: this.props.publicKey
+	            clicked: this.props.clickedLetters.includes(this.props.publicKey)
 	          });
 	        }
 	      }
